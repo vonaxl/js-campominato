@@ -1,6 +1,7 @@
 // var pc and player array list 
 var pc=[];
 var pNums=[];
+
 // random pc number
 function pcRandom() {
     x=1+Math.floor(Math.random() * 100);
