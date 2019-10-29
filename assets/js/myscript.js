@@ -15,7 +15,7 @@ function verifica() {
         }
     }
     if (y==1) {
-        console.log("numero gia presente");
+        console.log("IL PC NON E' ARRIVATO A 16 NUMERI");
     }else {
         pc.push(x);
     }
