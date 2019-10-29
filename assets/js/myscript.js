@@ -36,7 +36,7 @@ while (pc.length<16) {
 }
 
 console.log("BOMB NUMBERS ARE : "+pc);
-// player value verification 
+// player chosen value verification untoill 84
 function pVerifica() {
     var y;
     for (var i = 0 -1; i < pNums.length && i<85 ; i++) {
@@ -76,6 +76,6 @@ function winner(){
 
 winner();
 // if 1 of player value = 1 of pc random value. the game ends if not then continue asking player to put a number
-console.log(pNums);
+console.log("Numeri inseriti dal player = "pNums);
 
 console.log("Punteggio player = "+z);
