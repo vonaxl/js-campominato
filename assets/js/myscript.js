@@ -76,6 +76,6 @@ function winner(){
 
 winner();
 // if 1 of player value = 1 of pc random value. the game ends if not then continue asking player to put a number
-console.log("Numeri inseriti dal player = "pNums);
+console.log("Numeri inseriti dal player = "+pNums);
 
 console.log("Punteggio player = "+z);
