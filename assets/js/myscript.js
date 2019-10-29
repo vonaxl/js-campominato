@@ -43,7 +43,7 @@ function pVerifica() {
         }
     }
     if (y==1) {
-        alert("numero gia presente");
+        alert("numero gia presente , cambia numero");
     }else {
         pNums.push(p1);
     }
@@ -53,8 +53,8 @@ function pVerifica() {
 var y,z=0;
 function winner(){
     p1 = parseInt(prompt("Inserisci un numero da 1 a 100 finche non muori"));
+    pVerifica();
     if (p1>=1 && p1<=100) {
-        pVerifica();
         for (var i = 0 -1; i < pc.length; i++) {
             if (p1==pc[i]) {
             y=1;
