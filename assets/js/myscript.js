@@ -1,5 +1,6 @@
 // var pc and player array list 
 var pc=[];
+var pNums=[];
 // random pc number
 function pcRandom() {
     x=1+Math.floor(Math.random() * 100);
@@ -34,23 +35,45 @@ while (pc.length<16) {
 }
 console.log("BOMB NUMBERS ARE : "+pc);
 
-var y,z=0;
-function winner(){
-    p1 = parseInt(prompt("Inserisci un numero finche non muori"));
-    for (var i = 0 -1; i < pc.length; i++) {
-        if (p1==pc[i]) {
+function pVerifica() {
+    var y;
+    for (var i = 0 -1; i < pNums.length && i<85 ; i++) {
+        if (p1==pNums[i]) {
         y=1;
         }
     }
     if (y==1) {
-        alert("Hai perso")
+        alert("numero gia presente");
     }else {
-        z++;
-        winner();
+        pNums.push(p1);
+    }
+}
+
+// ask the user a value from 1 to 100 till he cancelAnimationFrame, in case he go over 100 the script stops 
+var y,z=0;
+function winner(){
+    p1 = parseInt(prompt("Inserisci un numero da 1 a 100 finche non muori"));
+    if (p1>=1 && p1<=100) {
+        pVerifica();
+        for (var i = 0 -1; i < pc.length; i++) {
+            if (p1==pc[i]) {
+            y=1;
+            }
+        }
+        if (y==1) {
+            alert("Hai perso")
+        }else {
+            z++;
+            winner();
+        }
+
+    }else{
+        alert("Ti ho detto da 1 a 100, ricarica la pagina")
     }
 }
 
 winner();
 // if 1 of player value = 1 of pc random value. the game ends if not then continue asking player to put a number
+console.log(pNums);
 
 console.log("Punteggio player = "+z);
