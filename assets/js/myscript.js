@@ -36,10 +36,11 @@ while (pc.length<16) {
 }
 
 console.log("BOMB NUMBERS ARE : "+pc);
-// player chosen value verification untoill 84
+
+// player chosen value verification untill 84
 function pVerifica() {
     var y;
-    for (var i = 0 -1; i < pNums.length && i<85 ; i++) {
+    for (var i = -1; i < pNums.length && i<85 ; i++) {
         if (p1==pNums[i]) {
             y=1;
         }
@@ -51,13 +52,13 @@ function pVerifica() {
     }
 }
 
-// ask the user a value from 1 to 100 till he cancelAnimationFrame, in case he go over 100 the script stops and if he put the samme number he get noticed
+// ask the user a value from 1 to 100 till he can in case he go over 100 the script stops and if he put the samme number he get noticed
 var y,z=0;
 function winner(){
     p1 = parseInt(prompt("Inserisci un numero da 1 a 100 finche non muori"));
     pVerifica();
     if (p1>=1 && p1<=100) {
-        for (var i = 0 -1; i < pc.length; i++) {
+        for (var i = 0; i < pc.length; i++) {
             if (p1==pc[i]) {
                 y=1;
             }
